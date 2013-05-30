@@ -48,6 +48,7 @@ include OperationsHelper
     }
     scores = []
     dates.each{|d|
+    
         scores.unshift(IndicatorScore.find_by_indicator_id_and_scoredate_id(indicator.id, d.id))            
     }
     return scores 

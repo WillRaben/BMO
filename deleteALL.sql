@@ -1,0 +1,1 @@
+﻿drop table indicator_father_son, indicator_scores, indicators, objective_scores, objectives, operations, perspective_scores, perspectives, raw_data, raw_data_scores, schema_migrations, score_dates, vectors, vectors_objectives, indicators_objectives, roles, users_roles, users;

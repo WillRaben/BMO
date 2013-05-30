@@ -12,9 +12,9 @@
 
 <% @score_dates.each do |score_date| %>
   <tr>
-    <td><%= score_date.id %></td>
-    <td><%= score_date.month %></td>
-    <td><%= score_date.year %></td>
+    <td> <%= score_date.id %> | </td>
+    <td><%= score_date.month %> | </td>
+    <td><%= score_date.year %>| </td>
     <td><%= link_to 'Show', score_date %></td>
     <td><%= link_to 'Edit', edit_score_date_path(score_date) %></td>
     <td><%= link_to 'Destroy', score_date, confirm: 'Are you sure?', method: :delete %></td>

@@ -10,6 +10,7 @@
 #
 
 class ScoreDate < ActiveRecord::Base
+  default_scope :order => 'id'
 
   has_many :rawdatascores, :class_name => 'RawDataScore', :foreign_key => "scoredate_id"
   accepts_nested_attributes_for :rawdatascores

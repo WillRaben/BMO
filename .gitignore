@@ -28,6 +28,7 @@ db/*.sqlite3
 .sass-cache
 /coverage.data
 /coverage/
+/config/database.yml
 /db/*.javadb/
 /db/*.sqlite3-journal
 /doc/api/
@@ -71,3 +72,6 @@ db/*.sqlite3
 
 # vim artifacts
 **.swp
+
+# aptana project file
+.project

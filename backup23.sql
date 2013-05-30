@@ -1,4 +1,4 @@
---
+﻿--
 -- PostgreSQL database dump
 --
 
@@ -38,7 +38,7 @@ SET default_with_oids = false;
 --
 -- TOC entry 182 (class 1259 OID 17619)
 -- Dependencies: 6
--- Name: indicator_father_son; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: indicator_father_son; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE indicator_father_son (
@@ -47,12 +47,12 @@ CREATE TABLE indicator_father_son (
 );
 
 
-ALTER TABLE public.indicator_father_son OWNER TO bmo;
+ALTER TABLE public.indicator_father_son OWNER TO dbUser;
 
 --
 -- TOC entry 178 (class 1259 OID 17597)
 -- Dependencies: 2223 6
--- Name: indicator_scores; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: indicator_scores; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE indicator_scores (
@@ -75,12 +75,12 @@ CREATE TABLE indicator_scores (
 );
 
 
-ALTER TABLE public.indicator_scores OWNER TO bmo;
+ALTER TABLE public.indicator_scores OWNER TO dbUser;
 
 --
 -- TOC entry 177 (class 1259 OID 17595)
 -- Dependencies: 6 178
--- Name: indicator_scores_id_seq; Type: SEQUENCE; Schema: public; Owner: bmo
+-- Name: indicator_scores_id_seq; Type: SEQUENCE; Schema: public; Owner: dbUser
 --
 
 CREATE SEQUENCE indicator_scores_id_seq
@@ -91,12 +91,12 @@ CREATE SEQUENCE indicator_scores_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.indicator_scores_id_seq OWNER TO bmo;
+ALTER TABLE public.indicator_scores_id_seq OWNER TO dbUser;
 
 --
 -- TOC entry 2288 (class 0 OID 0)
 -- Dependencies: 177
--- Name: indicator_scores_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: bmo
+-- Name: indicator_scores_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dbUser
 --
 
 ALTER SEQUENCE indicator_scores_id_seq OWNED BY indicator_scores.id;
@@ -105,7 +105,7 @@ ALTER SEQUENCE indicator_scores_id_seq OWNED BY indicator_scores.id;
 --
 -- TOC entry 2289 (class 0 OID 0)
 -- Dependencies: 177
--- Name: indicator_scores_id_seq; Type: SEQUENCE SET; Schema: public; Owner: bmo
+-- Name: indicator_scores_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dbUser
 --
 
 SELECT pg_catalog.setval('indicator_scores_id_seq', 1277, true);
@@ -114,7 +114,7 @@ SELECT pg_catalog.setval('indicator_scores_id_seq', 1277, true);
 --
 -- TOC entry 180 (class 1259 OID 17606)
 -- Dependencies: 2226 6
--- Name: indicators; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: indicators; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE indicators (
@@ -141,12 +141,12 @@ CREATE TABLE indicators (
 );
 
 
-ALTER TABLE public.indicators OWNER TO bmo;
+ALTER TABLE public.indicators OWNER TO dbUser;
 
 --
 -- TOC entry 179 (class 1259 OID 17604)
 -- Dependencies: 6 180
--- Name: indicators_id_seq; Type: SEQUENCE; Schema: public; Owner: bmo
+-- Name: indicators_id_seq; Type: SEQUENCE; Schema: public; Owner: dbUser
 --
 
 CREATE SEQUENCE indicators_id_seq
@@ -157,12 +157,12 @@ CREATE SEQUENCE indicators_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.indicators_id_seq OWNER TO bmo;
+ALTER TABLE public.indicators_id_seq OWNER TO dbUser;
 
 --
 -- TOC entry 2290 (class 0 OID 0)
 -- Dependencies: 179
--- Name: indicators_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: bmo
+-- Name: indicators_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dbUser
 --
 
 ALTER SEQUENCE indicators_id_seq OWNED BY indicators.id;
@@ -171,7 +171,7 @@ ALTER SEQUENCE indicators_id_seq OWNED BY indicators.id;
 --
 -- TOC entry 2291 (class 0 OID 0)
 -- Dependencies: 179
--- Name: indicators_id_seq; Type: SEQUENCE SET; Schema: public; Owner: bmo
+-- Name: indicators_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dbUser
 --
 
 SELECT pg_catalog.setval('indicators_id_seq', 1, false);
@@ -180,7 +180,7 @@ SELECT pg_catalog.setval('indicators_id_seq', 1, false);
 --
 -- TOC entry 181 (class 1259 OID 17616)
 -- Dependencies: 6
--- Name: indicators_objectives; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: indicators_objectives; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE indicators_objectives (
@@ -189,12 +189,12 @@ CREATE TABLE indicators_objectives (
 );
 
 
-ALTER TABLE public.indicators_objectives OWNER TO bmo;
+ALTER TABLE public.indicators_objectives OWNER TO dbUser;
 
 --
 -- TOC entry 176 (class 1259 OID 17589)
 -- Dependencies: 6
--- Name: objective_scores; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: objective_scores; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE objective_scores (
@@ -217,12 +217,12 @@ CREATE TABLE objective_scores (
 );
 
 
-ALTER TABLE public.objective_scores OWNER TO bmo;
+ALTER TABLE public.objective_scores OWNER TO dbUser;
 
 --
 -- TOC entry 175 (class 1259 OID 17587)
 -- Dependencies: 176 6
--- Name: objective_scores_id_seq; Type: SEQUENCE; Schema: public; Owner: bmo
+-- Name: objective_scores_id_seq; Type: SEQUENCE; Schema: public; Owner: dbUser
 --
 
 CREATE SEQUENCE objective_scores_id_seq
@@ -233,12 +233,12 @@ CREATE SEQUENCE objective_scores_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.objective_scores_id_seq OWNER TO bmo;
+ALTER TABLE public.objective_scores_id_seq OWNER TO dbUser;
 
 --
 -- TOC entry 2292 (class 0 OID 0)
 -- Dependencies: 175
--- Name: objective_scores_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: bmo
+-- Name: objective_scores_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dbUser
 --
 
 ALTER SEQUENCE objective_scores_id_seq OWNED BY objective_scores.id;
@@ -247,7 +247,7 @@ ALTER SEQUENCE objective_scores_id_seq OWNED BY objective_scores.id;
 --
 -- TOC entry 2293 (class 0 OID 0)
 -- Dependencies: 175
--- Name: objective_scores_id_seq; Type: SEQUENCE SET; Schema: public; Owner: bmo
+-- Name: objective_scores_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dbUser
 --
 
 SELECT pg_catalog.setval('objective_scores_id_seq', 726, true);
@@ -256,7 +256,7 @@ SELECT pg_catalog.setval('objective_scores_id_seq', 726, true);
 --
 -- TOC entry 170 (class 1259 OID 17561)
 -- Dependencies: 2218 6
--- Name: objectives; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: objectives; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE objectives (
@@ -287,12 +287,12 @@ CREATE TABLE objectives (
 );
 
 
-ALTER TABLE public.objectives OWNER TO bmo;
+ALTER TABLE public.objectives OWNER TO dbUser;
 
 --
 -- TOC entry 169 (class 1259 OID 17559)
 -- Dependencies: 6 170
--- Name: objectives_id_seq; Type: SEQUENCE; Schema: public; Owner: bmo
+-- Name: objectives_id_seq; Type: SEQUENCE; Schema: public; Owner: dbUser
 --
 
 CREATE SEQUENCE objectives_id_seq
@@ -303,12 +303,12 @@ CREATE SEQUENCE objectives_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.objectives_id_seq OWNER TO bmo;
+ALTER TABLE public.objectives_id_seq OWNER TO dbUser;
 
 --
 -- TOC entry 2294 (class 0 OID 0)
 -- Dependencies: 169
--- Name: objectives_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: bmo
+-- Name: objectives_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dbUser
 --
 
 ALTER SEQUENCE objectives_id_seq OWNED BY objectives.id;
@@ -317,7 +317,7 @@ ALTER SEQUENCE objectives_id_seq OWNED BY objectives.id;
 --
 -- TOC entry 2295 (class 0 OID 0)
 -- Dependencies: 169
--- Name: objectives_id_seq; Type: SEQUENCE SET; Schema: public; Owner: bmo
+-- Name: objectives_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dbUser
 --
 
 SELECT pg_catalog.setval('objectives_id_seq', 20, true);
@@ -326,7 +326,7 @@ SELECT pg_catalog.setval('objectives_id_seq', 20, true);
 --
 -- TOC entry 188 (class 1259 OID 17644)
 -- Dependencies: 6
--- Name: operations; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: operations; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE operations (
@@ -340,12 +340,12 @@ CREATE TABLE operations (
 );
 
 
-ALTER TABLE public.operations OWNER TO bmo;
+ALTER TABLE public.operations OWNER TO dbUser;
 
 --
 -- TOC entry 187 (class 1259 OID 17642)
 -- Dependencies: 6 188
--- Name: operations_id_seq; Type: SEQUENCE; Schema: public; Owner: bmo
+-- Name: operations_id_seq; Type: SEQUENCE; Schema: public; Owner: dbUser
 --
 
 CREATE SEQUENCE operations_id_seq
@@ -356,12 +356,12 @@ CREATE SEQUENCE operations_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.operations_id_seq OWNER TO bmo;
+ALTER TABLE public.operations_id_seq OWNER TO dbUser;
 
 --
 -- TOC entry 2296 (class 0 OID 0)
 -- Dependencies: 187
--- Name: operations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: bmo
+-- Name: operations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dbUser
 --
 
 ALTER SEQUENCE operations_id_seq OWNED BY operations.id;
@@ -370,7 +370,7 @@ ALTER SEQUENCE operations_id_seq OWNED BY operations.id;
 --
 -- TOC entry 2297 (class 0 OID 0)
 -- Dependencies: 187
--- Name: operations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: bmo
+-- Name: operations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dbUser
 --
 
 SELECT pg_catalog.setval('operations_id_seq', 1, false);
@@ -379,7 +379,7 @@ SELECT pg_catalog.setval('operations_id_seq', 1, false);
 --
 -- TOC entry 174 (class 1259 OID 17581)
 -- Dependencies: 6
--- Name: perspective_scores; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: perspective_scores; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE perspective_scores (
@@ -399,12 +399,12 @@ CREATE TABLE perspective_scores (
 );
 
 
-ALTER TABLE public.perspective_scores OWNER TO bmo;
+ALTER TABLE public.perspective_scores OWNER TO dbUser;
 
 --
 -- TOC entry 173 (class 1259 OID 17579)
 -- Dependencies: 174 6
--- Name: perspective_scores_id_seq; Type: SEQUENCE; Schema: public; Owner: bmo
+-- Name: perspective_scores_id_seq; Type: SEQUENCE; Schema: public; Owner: dbUser
 --
 
 CREATE SEQUENCE perspective_scores_id_seq
@@ -415,12 +415,12 @@ CREATE SEQUENCE perspective_scores_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.perspective_scores_id_seq OWNER TO bmo;
+ALTER TABLE public.perspective_scores_id_seq OWNER TO dbUser;
 
 --
 -- TOC entry 2298 (class 0 OID 0)
 -- Dependencies: 173
--- Name: perspective_scores_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: bmo
+-- Name: perspective_scores_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dbUser
 --
 
 ALTER SEQUENCE perspective_scores_id_seq OWNED BY perspective_scores.id;
@@ -429,7 +429,7 @@ ALTER SEQUENCE perspective_scores_id_seq OWNED BY perspective_scores.id;
 --
 -- TOC entry 2299 (class 0 OID 0)
 -- Dependencies: 173
--- Name: perspective_scores_id_seq; Type: SEQUENCE SET; Schema: public; Owner: bmo
+-- Name: perspective_scores_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dbUser
 --
 
 SELECT pg_catalog.setval('perspective_scores_id_seq', 103, true);
@@ -438,7 +438,7 @@ SELECT pg_catalog.setval('perspective_scores_id_seq', 103, true);
 --
 -- TOC entry 168 (class 1259 OID 17550)
 -- Dependencies: 6
--- Name: perspectives; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: perspectives; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE perspectives (
@@ -457,12 +457,12 @@ CREATE TABLE perspectives (
 );
 
 
-ALTER TABLE public.perspectives OWNER TO bmo;
+ALTER TABLE public.perspectives OWNER TO dbUser;
 
 --
 -- TOC entry 167 (class 1259 OID 17548)
 -- Dependencies: 168 6
--- Name: perspectives_id_seq; Type: SEQUENCE; Schema: public; Owner: bmo
+-- Name: perspectives_id_seq; Type: SEQUENCE; Schema: public; Owner: dbUser
 --
 
 CREATE SEQUENCE perspectives_id_seq
@@ -473,12 +473,12 @@ CREATE SEQUENCE perspectives_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.perspectives_id_seq OWNER TO bmo;
+ALTER TABLE public.perspectives_id_seq OWNER TO dbUser;
 
 --
 -- TOC entry 2300 (class 0 OID 0)
 -- Dependencies: 167
--- Name: perspectives_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: bmo
+-- Name: perspectives_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dbUser
 --
 
 ALTER SEQUENCE perspectives_id_seq OWNED BY perspectives.id;
@@ -487,7 +487,7 @@ ALTER SEQUENCE perspectives_id_seq OWNED BY perspectives.id;
 --
 -- TOC entry 2301 (class 0 OID 0)
 -- Dependencies: 167
--- Name: perspectives_id_seq; Type: SEQUENCE SET; Schema: public; Owner: bmo
+-- Name: perspectives_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dbUser
 --
 
 SELECT pg_catalog.setval('perspectives_id_seq', 5, true);
@@ -496,7 +496,7 @@ SELECT pg_catalog.setval('perspectives_id_seq', 5, true);
 --
 -- TOC entry 184 (class 1259 OID 17624)
 -- Dependencies: 2227 6
--- Name: raw_data; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: raw_data; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE raw_data (
@@ -510,12 +510,12 @@ CREATE TABLE raw_data (
 );
 
 
-ALTER TABLE public.raw_data OWNER TO bmo;
+ALTER TABLE public.raw_data OWNER TO dbUser;
 
 --
 -- TOC entry 183 (class 1259 OID 17622)
 -- Dependencies: 184 6
--- Name: raw_data_id_seq; Type: SEQUENCE; Schema: public; Owner: bmo
+-- Name: raw_data_id_seq; Type: SEQUENCE; Schema: public; Owner: dbUser
 --
 
 CREATE SEQUENCE raw_data_id_seq
@@ -526,12 +526,12 @@ CREATE SEQUENCE raw_data_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.raw_data_id_seq OWNER TO bmo;
+ALTER TABLE public.raw_data_id_seq OWNER TO dbUser;
 
 --
 -- TOC entry 2302 (class 0 OID 0)
 -- Dependencies: 183
--- Name: raw_data_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: bmo
+-- Name: raw_data_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dbUser
 --
 
 ALTER SEQUENCE raw_data_id_seq OWNED BY raw_data.id;
@@ -540,7 +540,7 @@ ALTER SEQUENCE raw_data_id_seq OWNED BY raw_data.id;
 --
 -- TOC entry 2303 (class 0 OID 0)
 -- Dependencies: 183
--- Name: raw_data_id_seq; Type: SEQUENCE SET; Schema: public; Owner: bmo
+-- Name: raw_data_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dbUser
 --
 
 SELECT pg_catalog.setval('raw_data_id_seq', 1, true);
@@ -549,7 +549,7 @@ SELECT pg_catalog.setval('raw_data_id_seq', 1, true);
 --
 -- TOC entry 186 (class 1259 OID 17636)
 -- Dependencies: 6
--- Name: raw_data_scores; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: raw_data_scores; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE raw_data_scores (
@@ -562,12 +562,12 @@ CREATE TABLE raw_data_scores (
 );
 
 
-ALTER TABLE public.raw_data_scores OWNER TO bmo;
+ALTER TABLE public.raw_data_scores OWNER TO dbUser;
 
 --
 -- TOC entry 185 (class 1259 OID 17634)
 -- Dependencies: 186 6
--- Name: raw_data_scores_id_seq; Type: SEQUENCE; Schema: public; Owner: bmo
+-- Name: raw_data_scores_id_seq; Type: SEQUENCE; Schema: public; Owner: dbUser
 --
 
 CREATE SEQUENCE raw_data_scores_id_seq
@@ -578,12 +578,12 @@ CREATE SEQUENCE raw_data_scores_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.raw_data_scores_id_seq OWNER TO bmo;
+ALTER TABLE public.raw_data_scores_id_seq OWNER TO dbUser;
 
 --
 -- TOC entry 2304 (class 0 OID 0)
 -- Dependencies: 185
--- Name: raw_data_scores_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: bmo
+-- Name: raw_data_scores_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dbUser
 --
 
 ALTER SEQUENCE raw_data_scores_id_seq OWNED BY raw_data_scores.id;
@@ -592,7 +592,7 @@ ALTER SEQUENCE raw_data_scores_id_seq OWNED BY raw_data_scores.id;
 --
 -- TOC entry 2305 (class 0 OID 0)
 -- Dependencies: 185
--- Name: raw_data_scores_id_seq; Type: SEQUENCE SET; Schema: public; Owner: bmo
+-- Name: raw_data_scores_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dbUser
 --
 
 SELECT pg_catalog.setval('raw_data_scores_id_seq', 1, false);
@@ -601,7 +601,7 @@ SELECT pg_catalog.setval('raw_data_scores_id_seq', 1, false);
 --
 -- TOC entry 165 (class 1259 OID 17533)
 -- Dependencies: 6
--- Name: roles; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: roles; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE roles (
@@ -614,12 +614,12 @@ CREATE TABLE roles (
 );
 
 
-ALTER TABLE public.roles OWNER TO bmo;
+ALTER TABLE public.roles OWNER TO dbUser;
 
 --
 -- TOC entry 164 (class 1259 OID 17531)
 -- Dependencies: 6 165
--- Name: roles_id_seq; Type: SEQUENCE; Schema: public; Owner: bmo
+-- Name: roles_id_seq; Type: SEQUENCE; Schema: public; Owner: dbUser
 --
 
 CREATE SEQUENCE roles_id_seq
@@ -630,12 +630,12 @@ CREATE SEQUENCE roles_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.roles_id_seq OWNER TO bmo;
+ALTER TABLE public.roles_id_seq OWNER TO dbUser;
 
 --
 -- TOC entry 2306 (class 0 OID 0)
 -- Dependencies: 164
--- Name: roles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: bmo
+-- Name: roles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dbUser
 --
 
 ALTER SEQUENCE roles_id_seq OWNED BY roles.id;
@@ -644,7 +644,7 @@ ALTER SEQUENCE roles_id_seq OWNED BY roles.id;
 --
 -- TOC entry 2307 (class 0 OID 0)
 -- Dependencies: 164
--- Name: roles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: bmo
+-- Name: roles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dbUser
 --
 
 SELECT pg_catalog.setval('roles_id_seq', 5, true);
@@ -653,7 +653,7 @@ SELECT pg_catalog.setval('roles_id_seq', 5, true);
 --
 -- TOC entry 161 (class 1259 OID 17511)
 -- Dependencies: 6
--- Name: schema_migrations; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: schema_migrations; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE schema_migrations (
@@ -661,12 +661,12 @@ CREATE TABLE schema_migrations (
 );
 
 
-ALTER TABLE public.schema_migrations OWNER TO bmo;
+ALTER TABLE public.schema_migrations OWNER TO dbUser;
 
 --
 -- TOC entry 172 (class 1259 OID 17573)
 -- Dependencies: 6
--- Name: score_dates; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: score_dates; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE score_dates (
@@ -678,12 +678,12 @@ CREATE TABLE score_dates (
 );
 
 
-ALTER TABLE public.score_dates OWNER TO bmo;
+ALTER TABLE public.score_dates OWNER TO dbUser;
 
 --
 -- TOC entry 171 (class 1259 OID 17571)
 -- Dependencies: 6 172
--- Name: score_dates_id_seq; Type: SEQUENCE; Schema: public; Owner: bmo
+-- Name: score_dates_id_seq; Type: SEQUENCE; Schema: public; Owner: dbUser
 --
 
 CREATE SEQUENCE score_dates_id_seq
@@ -694,12 +694,12 @@ CREATE SEQUENCE score_dates_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.score_dates_id_seq OWNER TO bmo;
+ALTER TABLE public.score_dates_id_seq OWNER TO dbUser;
 
 --
 -- TOC entry 2308 (class 0 OID 0)
 -- Dependencies: 171
--- Name: score_dates_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: bmo
+-- Name: score_dates_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dbUser
 --
 
 ALTER SEQUENCE score_dates_id_seq OWNED BY score_dates.id;
@@ -708,7 +708,7 @@ ALTER SEQUENCE score_dates_id_seq OWNED BY score_dates.id;
 --
 -- TOC entry 2309 (class 0 OID 0)
 -- Dependencies: 171
--- Name: score_dates_id_seq; Type: SEQUENCE SET; Schema: public; Owner: bmo
+-- Name: score_dates_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dbUser
 --
 
 SELECT pg_catalog.setval('score_dates_id_seq', 36, true);
@@ -717,7 +717,7 @@ SELECT pg_catalog.setval('score_dates_id_seq', 36, true);
 --
 -- TOC entry 163 (class 1259 OID 17517)
 -- Dependencies: 2212 2213 2214 6
--- Name: users; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: users; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE users (
@@ -738,12 +738,12 @@ CREATE TABLE users (
 );
 
 
-ALTER TABLE public.users OWNER TO bmo;
+ALTER TABLE public.users OWNER TO dbUser;
 
 --
 -- TOC entry 162 (class 1259 OID 17515)
 -- Dependencies: 6 163
--- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: bmo
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: dbUser
 --
 
 CREATE SEQUENCE users_id_seq
@@ -754,12 +754,12 @@ CREATE SEQUENCE users_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.users_id_seq OWNER TO bmo;
+ALTER TABLE public.users_id_seq OWNER TO dbUser;
 
 --
 -- TOC entry 2310 (class 0 OID 0)
 -- Dependencies: 162
--- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: bmo
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dbUser
 --
 
 ALTER SEQUENCE users_id_seq OWNED BY users.id;
@@ -768,7 +768,7 @@ ALTER SEQUENCE users_id_seq OWNED BY users.id;
 --
 -- TOC entry 2311 (class 0 OID 0)
 -- Dependencies: 162
--- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: bmo
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dbUser
 --
 
 SELECT pg_catalog.setval('users_id_seq', 16, true);
@@ -777,7 +777,7 @@ SELECT pg_catalog.setval('users_id_seq', 16, true);
 --
 -- TOC entry 166 (class 1259 OID 17542)
 -- Dependencies: 6
--- Name: users_roles; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: users_roles; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE users_roles (
@@ -786,12 +786,12 @@ CREATE TABLE users_roles (
 );
 
 
-ALTER TABLE public.users_roles OWNER TO bmo;
+ALTER TABLE public.users_roles OWNER TO dbUser;
 
 --
 -- TOC entry 190 (class 1259 OID 17652)
 -- Dependencies: 6
--- Name: vectors; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: vectors; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE vectors (
@@ -802,12 +802,12 @@ CREATE TABLE vectors (
 );
 
 
-ALTER TABLE public.vectors OWNER TO bmo;
+ALTER TABLE public.vectors OWNER TO dbUser;
 
 --
 -- TOC entry 189 (class 1259 OID 17650)
 -- Dependencies: 6 190
--- Name: vectors_id_seq; Type: SEQUENCE; Schema: public; Owner: bmo
+-- Name: vectors_id_seq; Type: SEQUENCE; Schema: public; Owner: dbUser
 --
 
 CREATE SEQUENCE vectors_id_seq
@@ -818,12 +818,12 @@ CREATE SEQUENCE vectors_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.vectors_id_seq OWNER TO bmo;
+ALTER TABLE public.vectors_id_seq OWNER TO dbUser;
 
 --
 -- TOC entry 2312 (class 0 OID 0)
 -- Dependencies: 189
--- Name: vectors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: bmo
+-- Name: vectors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dbUser
 --
 
 ALTER SEQUENCE vectors_id_seq OWNED BY vectors.id;
@@ -832,7 +832,7 @@ ALTER SEQUENCE vectors_id_seq OWNED BY vectors.id;
 --
 -- TOC entry 2313 (class 0 OID 0)
 -- Dependencies: 189
--- Name: vectors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: bmo
+-- Name: vectors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dbUser
 --
 
 SELECT pg_catalog.setval('vectors_id_seq', 6, true);
@@ -841,7 +841,7 @@ SELECT pg_catalog.setval('vectors_id_seq', 6, true);
 --
 -- TOC entry 191 (class 1259 OID 17658)
 -- Dependencies: 6
--- Name: vectors_objectives; Type: TABLE; Schema: public; Owner: bmo; Tablespace: 
+-- Name: vectors_objectives; Type: TABLE; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE TABLE vectors_objectives (
@@ -850,12 +850,12 @@ CREATE TABLE vectors_objectives (
 );
 
 
-ALTER TABLE public.vectors_objectives OWNER TO bmo;
+ALTER TABLE public.vectors_objectives OWNER TO dbUser;
 
 --
 -- TOC entry 2224 (class 2604 OID 17662)
 -- Dependencies: 178 177 178
--- Name: id; Type: DEFAULT; Schema: public; Owner: bmo
+-- Name: id; Type: DEFAULT; Schema: public; Owner: dbUser
 --
 
 ALTER TABLE ONLY indicator_scores ALTER COLUMN id SET DEFAULT nextval('indicator_scores_id_seq'::regclass);
@@ -864,7 +864,7 @@ ALTER TABLE ONLY indicator_scores ALTER COLUMN id SET DEFAULT nextval('indicator
 --
 -- TOC entry 2225 (class 2604 OID 17609)
 -- Dependencies: 179 180 180
--- Name: id; Type: DEFAULT; Schema: public; Owner: bmo
+-- Name: id; Type: DEFAULT; Schema: public; Owner: dbUser
 --
 
 ALTER TABLE ONLY indicators ALTER COLUMN id SET DEFAULT nextval('indicators_id_seq'::regclass);
@@ -873,7 +873,7 @@ ALTER TABLE ONLY indicators ALTER COLUMN id SET DEFAULT nextval('indicators_id_s
 --
 -- TOC entry 2222 (class 2604 OID 17663)
 -- Dependencies: 176 175 176
--- Name: id; Type: DEFAULT; Schema: public; Owner: bmo
+-- Name: id; Type: DEFAULT; Schema: public; Owner: dbUser
 --
 
 ALTER TABLE ONLY objective_scores ALTER COLUMN id SET DEFAULT nextval('objective_scores_id_seq'::regclass);
@@ -882,7 +882,7 @@ ALTER TABLE ONLY objective_scores ALTER COLUMN id SET DEFAULT nextval('objective
 --
 -- TOC entry 2219 (class 2604 OID 17664)
 -- Dependencies: 169 170 170
--- Name: id; Type: DEFAULT; Schema: public; Owner: bmo
+-- Name: id; Type: DEFAULT; Schema: public; Owner: dbUser
 --
 
 ALTER TABLE ONLY objectives ALTER COLUMN id SET DEFAULT nextval('objectives_id_seq'::regclass);
@@ -891,7 +891,7 @@ ALTER TABLE ONLY objectives ALTER COLUMN id SET DEFAULT nextval('objectives_id_s
 --
 -- TOC entry 2230 (class 2604 OID 17665)
 -- Dependencies: 188 187 188
--- Name: id; Type: DEFAULT; Schema: public; Owner: bmo
+-- Name: id; Type: DEFAULT; Schema: public; Owner: dbUser
 --
 
 ALTER TABLE ONLY operations ALTER COLUMN id SET DEFAULT nextval('operations_id_seq'::regclass);
@@ -900,7 +900,7 @@ ALTER TABLE ONLY operations ALTER COLUMN id SET DEFAULT nextval('operations_id_s
 --
 -- TOC entry 2221 (class 2604 OID 17666)
 -- Dependencies: 174 173 174
--- Name: id; Type: DEFAULT; Schema: public; Owner: bmo
+-- Name: id; Type: DEFAULT; Schema: public; Owner: dbUser
 --
 
 ALTER TABLE ONLY perspective_scores ALTER COLUMN id SET DEFAULT nextval('perspective_scores_id_seq'::regclass);
@@ -909,7 +909,7 @@ ALTER TABLE ONLY perspective_scores ALTER COLUMN id SET DEFAULT nextval('perspec
 --
 -- TOC entry 2217 (class 2604 OID 17667)
 -- Dependencies: 168 167 168
--- Name: id; Type: DEFAULT; Schema: public; Owner: bmo
+-- Name: id; Type: DEFAULT; Schema: public; Owner: dbUser
 --
 
 ALTER TABLE ONLY perspectives ALTER COLUMN id SET DEFAULT nextval('perspectives_id_seq'::regclass);
@@ -918,7 +918,7 @@ ALTER TABLE ONLY perspectives ALTER COLUMN id SET DEFAULT nextval('perspectives_
 --
 -- TOC entry 2228 (class 2604 OID 17668)
 -- Dependencies: 184 183 184
--- Name: id; Type: DEFAULT; Schema: public; Owner: bmo
+-- Name: id; Type: DEFAULT; Schema: public; Owner: dbUser
 --
 
 ALTER TABLE ONLY raw_data ALTER COLUMN id SET DEFAULT nextval('raw_data_id_seq'::regclass);
@@ -927,7 +927,7 @@ ALTER TABLE ONLY raw_data ALTER COLUMN id SET DEFAULT nextval('raw_data_id_seq':
 --
 -- TOC entry 2229 (class 2604 OID 17669)
 -- Dependencies: 186 185 186
--- Name: id; Type: DEFAULT; Schema: public; Owner: bmo
+-- Name: id; Type: DEFAULT; Schema: public; Owner: dbUser
 --
 
 ALTER TABLE ONLY raw_data_scores ALTER COLUMN id SET DEFAULT nextval('raw_data_scores_id_seq'::regclass);
@@ -936,7 +936,7 @@ ALTER TABLE ONLY raw_data_scores ALTER COLUMN id SET DEFAULT nextval('raw_data_s
 --
 -- TOC entry 2216 (class 2604 OID 17670)
 -- Dependencies: 165 164 165
--- Name: id; Type: DEFAULT; Schema: public; Owner: bmo
+-- Name: id; Type: DEFAULT; Schema: public; Owner: dbUser
 --
 
 ALTER TABLE ONLY roles ALTER COLUMN id SET DEFAULT nextval('roles_id_seq'::regclass);
@@ -945,7 +945,7 @@ ALTER TABLE ONLY roles ALTER COLUMN id SET DEFAULT nextval('roles_id_seq'::regcl
 --
 -- TOC entry 2220 (class 2604 OID 17671)
 -- Dependencies: 172 171 172
--- Name: id; Type: DEFAULT; Schema: public; Owner: bmo
+-- Name: id; Type: DEFAULT; Schema: public; Owner: dbUser
 --
 
 ALTER TABLE ONLY score_dates ALTER COLUMN id SET DEFAULT nextval('score_dates_id_seq'::regclass);
@@ -954,7 +954,7 @@ ALTER TABLE ONLY score_dates ALTER COLUMN id SET DEFAULT nextval('score_dates_id
 --
 -- TOC entry 2215 (class 2604 OID 17672)
 -- Dependencies: 163 162 163
--- Name: id; Type: DEFAULT; Schema: public; Owner: bmo
+-- Name: id; Type: DEFAULT; Schema: public; Owner: dbUser
 --
 
 ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regclass);
@@ -963,7 +963,7 @@ ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regcl
 --
 -- TOC entry 2231 (class 2604 OID 17673)
 -- Dependencies: 189 190 190
--- Name: id; Type: DEFAULT; Schema: public; Owner: bmo
+-- Name: id; Type: DEFAULT; Schema: public; Owner: dbUser
 --
 
 ALTER TABLE ONLY vectors ALTER COLUMN id SET DEFAULT nextval('vectors_id_seq'::regclass);
@@ -972,7 +972,7 @@ ALTER TABLE ONLY vectors ALTER COLUMN id SET DEFAULT nextval('vectors_id_seq'::r
 --
 -- TOC entry 2276 (class 0 OID 17619)
 -- Dependencies: 182
--- Data for Name: indicator_father_son; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: indicator_father_son; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (21, 40);
@@ -1145,7 +1145,7 @@ INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (8
 --
 -- TOC entry 2273 (class 0 OID 17597)
 -- Dependencies: 178
--- Data for Name: indicator_scores; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: indicator_scores; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 INSERT INTO indicator_scores (id, indicator_id, scoredate_id, score, goal, redfrom, redto, yellowfrom, yellowto, greenfrom, greento, baseline, growth, progress, created_at, updated_at) VALUES (43, 2, 18, 64, 75, 0, 25, 25, 75, 75, 100, 60, NULL, 64, '2012-08-09 19:39:26.138291', '2012-11-10 20:37:23.5105');
@@ -2428,7 +2428,7 @@ INSERT INTO indicator_scores (id, indicator_id, scoredate_id, score, goal, redfr
 --
 -- TOC entry 2274 (class 0 OID 17606)
 -- Dependencies: 180
--- Data for Name: indicators; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: indicators; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 INSERT INTO indicators (id, name, acronym, weight, objective_id, operation_id, redfrom, redto, yellowfrom, yellowto, greenfrom, greento, progress, baseline, growth, unit, formula, show, created_at, updated_at) VALUES (2, 'Ventas Anuales', 'Ventas Anuales', 25, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', true, '2012-08-09 18:43:19.280852', '2012-10-30 14:16:57.861655');
@@ -2487,7 +2487,7 @@ INSERT INTO indicators (id, name, acronym, weight, objective_id, operation_id, r
 --
 -- TOC entry 2275 (class 0 OID 17616)
 -- Dependencies: 181
--- Data for Name: indicators_objectives; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: indicators_objectives; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 INSERT INTO indicators_objectives (indicator_id, objective_id) VALUES (40, 10);
@@ -2515,7 +2515,7 @@ INSERT INTO indicators_objectives (indicator_id, objective_id) VALUES (40, 12);
 --
 -- TOC entry 2272 (class 0 OID 17589)
 -- Dependencies: 176
--- Data for Name: objective_scores; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: objective_scores; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 INSERT INTO objective_scores (id, objective_id, scoredate_id, score, redfrom, redto, yellowfrom, yellowto, greenfrom, greento, progress, baseline, growth, goal, created_at, updated_at) VALUES (21, 1, 21, 37, 0, 25, 25, 75, 75, 100, 37, 60, NULL, 75, '2012-08-09 19:51:35.322639', '2012-11-10 21:07:17.655909');
@@ -3243,7 +3243,7 @@ INSERT INTO objective_scores (id, objective_id, scoredate_id, score, redfrom, re
 --
 -- TOC entry 2269 (class 0 OID 17561)
 -- Dependencies: 170
--- Data for Name: objectives; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: objectives; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 INSERT INTO objectives (id, name, acronym, weight, score, perspective_id, redfrom, redto, yellowfrom, yellowto, greenfrom, greento, progress, baseline, growth, measurement, show, "greenButton", "yellowButton", "redButton", col, "row", created_at, updated_at) VALUES (9, 'Compromiso como Aliados de Negocio', 'Compromiso como Aliados de Negocio', 25, NULL, 2, 0, 25, 25, 75, 75, 100, NULL, NULL, NULL, NULL, true, 'alc/CompromisosComo-verde.png', 'alc/CompromisosComo-amarillo.png', 'alc/CompromisosComo-rojo.png', 5, 1, '2012-08-09 16:18:37.102994', '2012-08-09 20:24:31.528222');
@@ -3271,7 +3271,7 @@ INSERT INTO objectives (id, name, acronym, weight, score, perspective_id, redfro
 --
 -- TOC entry 2279 (class 0 OID 17644)
 -- Dependencies: 188
--- Data for Name: operations; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: operations; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 
@@ -3279,7 +3279,7 @@ INSERT INTO objectives (id, name, acronym, weight, score, perspective_id, redfro
 --
 -- TOC entry 2271 (class 0 OID 17581)
 -- Dependencies: 174
--- Data for Name: perspective_scores; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: perspective_scores; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 INSERT INTO perspective_scores (id, perspective_id, scoredate_id, score, redfrom, redto, yellowfrom, yellowto, greenfrom, greento, goal, created_at, updated_at) VALUES (5, 1, 5, 48, 0, 25, 25, 75, 75, 100, NULL, '2012-08-09 19:59:54.551195', '2012-11-21 20:37:07.942013');
@@ -3390,7 +3390,7 @@ INSERT INTO perspective_scores (id, perspective_id, scoredate_id, score, redfrom
 --
 -- TOC entry 2268 (class 0 OID 17550)
 -- Dependencies: 168
--- Data for Name: perspectives; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: perspectives; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 INSERT INTO perspectives (id, name, weight, redfrom, redto, yellowfrom, yellowto, greenfrom, greento, title_image, created_at, updated_at) VALUES (1, 'Financiera', 25, 0, 25, 25, 75, 75, 100, 'financiera_btn.png', '2012-06-20 20:03:43.425282', '2012-06-20 20:03:43.425282');
@@ -3403,7 +3403,7 @@ INSERT INTO perspectives (id, name, weight, redfrom, redto, yellowfrom, yellowto
 --
 -- TOC entry 2277 (class 0 OID 17624)
 -- Dependencies: 184
--- Data for Name: raw_data; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: raw_data; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 
@@ -3411,7 +3411,7 @@ INSERT INTO perspectives (id, name, weight, redfrom, redto, yellowfrom, yellowto
 --
 -- TOC entry 2278 (class 0 OID 17636)
 -- Dependencies: 186
--- Data for Name: raw_data_scores; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: raw_data_scores; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 
@@ -3419,7 +3419,7 @@ INSERT INTO perspectives (id, name, weight, redfrom, redto, yellowfrom, yellowto
 --
 -- TOC entry 2266 (class 0 OID 17533)
 -- Dependencies: 165
--- Data for Name: roles; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: roles; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 INSERT INTO roles (id, name, resource_id, resource_type, created_at, updated_at) VALUES (2, 'admin', NULL, NULL, '2012-11-30 00:47:12.835922', '2012-11-30 00:47:12.835922');
@@ -3430,7 +3430,7 @@ INSERT INTO roles (id, name, resource_id, resource_type, created_at, updated_at)
 --
 -- TOC entry 2264 (class 0 OID 17511)
 -- Dependencies: 161
--- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 INSERT INTO schema_migrations (version) VALUES ('20120418171104');
@@ -3456,7 +3456,7 @@ INSERT INTO schema_migrations (version) VALUES ('20120625052345');
 --
 -- TOC entry 2270 (class 0 OID 17573)
 -- Dependencies: 172
--- Data for Name: score_dates; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: score_dates; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 INSERT INTO score_dates (id, month, year, created_at, updated_at) VALUES (1, 1, 2011, '2012-08-09 14:15:45.991827', '2012-08-09 14:15:45.991827');
@@ -3500,7 +3500,7 @@ INSERT INTO score_dates (id, month, year, created_at, updated_at) VALUES (36, 12
 --
 -- TOC entry 2265 (class 0 OID 17517)
 -- Dependencies: 163
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 INSERT INTO users (id, email, encrypted_password, reset_password_token, reset_password_sent_at, remember_created_at, sign_in_count, current_sign_in_at, last_sign_in_at, current_sign_in_ip, last_sign_in_ip, created_at, updated_at, name) VALUES (11, 'cliente1@cliente.com', '$2a$10$7fBBfW4kww8JKoPpMTTfSuqDqtNWZu0cCgvOxE5S7kKgvfZauDp4W', NULL, NULL, NULL, 2, '2012-12-03 19:54:13.743979', '2012-11-30 06:44:07.519073', '127.0.0.1', '127.0.0.1', '2012-11-30 06:42:27.088', '2012-12-03 19:55:15.749275', 'cliente1');
@@ -3513,7 +3513,7 @@ INSERT INTO users (id, email, encrypted_password, reset_password_token, reset_pa
 --
 -- TOC entry 2267 (class 0 OID 17542)
 -- Dependencies: 166
--- Data for Name: users_roles; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: users_roles; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 INSERT INTO users_roles (user_id, role_id) VALUES (14, 4);
@@ -3526,7 +3526,7 @@ INSERT INTO users_roles (user_id, role_id) VALUES (8, 4);
 --
 -- TOC entry 2280 (class 0 OID 17652)
 -- Dependencies: 190
--- Data for Name: vectors; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: vectors; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 INSERT INTO vectors (id, name, created_at, updated_at) VALUES (1, 'Fortalecer la internacionalizacion', '2012-08-14 14:27:51.467841', '2012-08-14 14:27:51.467841');
@@ -3538,7 +3538,7 @@ INSERT INTO vectors (id, name, created_at, updated_at) VALUES (4, 'Eficiencia', 
 --
 -- TOC entry 2281 (class 0 OID 17658)
 -- Dependencies: 191
--- Data for Name: vectors_objectives; Type: TABLE DATA; Schema: public; Owner: bmo
+-- Data for Name: vectors_objectives; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
 INSERT INTO vectors_objectives (vector_id, objective_id) VALUES (1, 10);
@@ -3594,7 +3594,7 @@ INSERT INTO vectors_objectives (vector_id, objective_id) VALUES (4, 18);
 --
 -- TOC entry 2253 (class 2606 OID 17603)
 -- Dependencies: 178 178
--- Name: indicator_scores_pkey; Type: CONSTRAINT; Schema: public; Owner: bmo; Tablespace: 
+-- Name: indicator_scores_pkey; Type: CONSTRAINT; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 ALTER TABLE ONLY indicator_scores
@@ -3604,7 +3604,7 @@ ALTER TABLE ONLY indicator_scores
 --
 -- TOC entry 2255 (class 2606 OID 17615)
 -- Dependencies: 180 180
--- Name: indicators_pkey; Type: CONSTRAINT; Schema: public; Owner: bmo; Tablespace: 
+-- Name: indicators_pkey; Type: CONSTRAINT; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 ALTER TABLE ONLY indicators
@@ -3614,7 +3614,7 @@ ALTER TABLE ONLY indicators
 --
 -- TOC entry 2251 (class 2606 OID 17594)
 -- Dependencies: 176 176
--- Name: objective_scores_pkey; Type: CONSTRAINT; Schema: public; Owner: bmo; Tablespace: 
+-- Name: objective_scores_pkey; Type: CONSTRAINT; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 ALTER TABLE ONLY objective_scores
@@ -3624,7 +3624,7 @@ ALTER TABLE ONLY objective_scores
 --
 -- TOC entry 2245 (class 2606 OID 17570)
 -- Dependencies: 170 170
--- Name: objectives_pkey; Type: CONSTRAINT; Schema: public; Owner: bmo; Tablespace: 
+-- Name: objectives_pkey; Type: CONSTRAINT; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 ALTER TABLE ONLY objectives
@@ -3634,7 +3634,7 @@ ALTER TABLE ONLY objectives
 --
 -- TOC entry 2261 (class 2606 OID 17649)
 -- Dependencies: 188 188
--- Name: operations_pkey; Type: CONSTRAINT; Schema: public; Owner: bmo; Tablespace: 
+-- Name: operations_pkey; Type: CONSTRAINT; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 ALTER TABLE ONLY operations
@@ -3644,7 +3644,7 @@ ALTER TABLE ONLY operations
 --
 -- TOC entry 2249 (class 2606 OID 17586)
 -- Dependencies: 174 174
--- Name: perspective_scores_pkey; Type: CONSTRAINT; Schema: public; Owner: bmo; Tablespace: 
+-- Name: perspective_scores_pkey; Type: CONSTRAINT; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 ALTER TABLE ONLY perspective_scores
@@ -3654,7 +3654,7 @@ ALTER TABLE ONLY perspective_scores
 --
 -- TOC entry 2243 (class 2606 OID 17558)
 -- Dependencies: 168 168
--- Name: perspectives_pkey; Type: CONSTRAINT; Schema: public; Owner: bmo; Tablespace: 
+-- Name: perspectives_pkey; Type: CONSTRAINT; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 ALTER TABLE ONLY perspectives
@@ -3664,7 +3664,7 @@ ALTER TABLE ONLY perspectives
 --
 -- TOC entry 2257 (class 2606 OID 17633)
 -- Dependencies: 184 184
--- Name: raw_data_pkey; Type: CONSTRAINT; Schema: public; Owner: bmo; Tablespace: 
+-- Name: raw_data_pkey; Type: CONSTRAINT; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 ALTER TABLE ONLY raw_data
@@ -3674,7 +3674,7 @@ ALTER TABLE ONLY raw_data
 --
 -- TOC entry 2259 (class 2606 OID 17641)
 -- Dependencies: 186 186
--- Name: raw_data_scores_pkey; Type: CONSTRAINT; Schema: public; Owner: bmo; Tablespace: 
+-- Name: raw_data_scores_pkey; Type: CONSTRAINT; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 ALTER TABLE ONLY raw_data_scores
@@ -3684,7 +3684,7 @@ ALTER TABLE ONLY raw_data_scores
 --
 -- TOC entry 2240 (class 2606 OID 17541)
 -- Dependencies: 165 165
--- Name: roles_pkey; Type: CONSTRAINT; Schema: public; Owner: bmo; Tablespace: 
+-- Name: roles_pkey; Type: CONSTRAINT; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 ALTER TABLE ONLY roles
@@ -3694,7 +3694,7 @@ ALTER TABLE ONLY roles
 --
 -- TOC entry 2247 (class 2606 OID 17578)
 -- Dependencies: 172 172
--- Name: score_dates_pkey; Type: CONSTRAINT; Schema: public; Owner: bmo; Tablespace: 
+-- Name: score_dates_pkey; Type: CONSTRAINT; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 ALTER TABLE ONLY score_dates
@@ -3704,7 +3704,7 @@ ALTER TABLE ONLY score_dates
 --
 -- TOC entry 2236 (class 2606 OID 17528)
 -- Dependencies: 163 163
--- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: bmo; Tablespace: 
+-- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 ALTER TABLE ONLY users
@@ -3714,7 +3714,7 @@ ALTER TABLE ONLY users
 --
 -- TOC entry 2263 (class 2606 OID 17657)
 -- Dependencies: 190 190
--- Name: vectors_pkey; Type: CONSTRAINT; Schema: public; Owner: bmo; Tablespace: 
+-- Name: vectors_pkey; Type: CONSTRAINT; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 ALTER TABLE ONLY vectors
@@ -3724,7 +3724,7 @@ ALTER TABLE ONLY vectors
 --
 -- TOC entry 2237 (class 1259 OID 17545)
 -- Dependencies: 165
--- Name: index_roles_on_name; Type: INDEX; Schema: public; Owner: bmo; Tablespace: 
+-- Name: index_roles_on_name; Type: INDEX; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE INDEX index_roles_on_name ON roles USING btree (name);
@@ -3733,7 +3733,7 @@ CREATE INDEX index_roles_on_name ON roles USING btree (name);
 --
 -- TOC entry 2238 (class 1259 OID 17546)
 -- Dependencies: 165 165 165
--- Name: index_roles_on_name_and_resource_type_and_resource_id; Type: INDEX; Schema: public; Owner: bmo; Tablespace: 
+-- Name: index_roles_on_name_and_resource_type_and_resource_id; Type: INDEX; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE INDEX index_roles_on_name_and_resource_type_and_resource_id ON roles USING btree (name, resource_type, resource_id);
@@ -3742,7 +3742,7 @@ CREATE INDEX index_roles_on_name_and_resource_type_and_resource_id ON roles USIN
 --
 -- TOC entry 2233 (class 1259 OID 17529)
 -- Dependencies: 163
--- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: bmo; Tablespace: 
+-- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE UNIQUE INDEX index_users_on_email ON users USING btree (email);
@@ -3751,7 +3751,7 @@ CREATE UNIQUE INDEX index_users_on_email ON users USING btree (email);
 --
 -- TOC entry 2234 (class 1259 OID 17530)
 -- Dependencies: 163
--- Name: index_users_on_reset_password_token; Type: INDEX; Schema: public; Owner: bmo; Tablespace: 
+-- Name: index_users_on_reset_password_token; Type: INDEX; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE UNIQUE INDEX index_users_on_reset_password_token ON users USING btree (reset_password_token);
@@ -3760,7 +3760,7 @@ CREATE UNIQUE INDEX index_users_on_reset_password_token ON users USING btree (re
 --
 -- TOC entry 2241 (class 1259 OID 17547)
 -- Dependencies: 166 166
--- Name: index_users_roles_on_user_id_and_role_id; Type: INDEX; Schema: public; Owner: bmo; Tablespace: 
+-- Name: index_users_roles_on_user_id_and_role_id; Type: INDEX; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE INDEX index_users_roles_on_user_id_and_role_id ON users_roles USING btree (user_id, role_id);
@@ -3769,7 +3769,7 @@ CREATE INDEX index_users_roles_on_user_id_and_role_id ON users_roles USING btree
 --
 -- TOC entry 2232 (class 1259 OID 17514)
 -- Dependencies: 161
--- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: bmo; Tablespace: 
+-- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: dbUser; Tablespace: 
 --
 
 CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (version);

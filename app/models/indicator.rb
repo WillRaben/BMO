@@ -25,8 +25,8 @@
 #
 
 class Indicator < ActiveRecord::Base
-  attr_accessible :name, :objective_ids, :weight, :operation_id, :objective_id, :unit, :formula, :acronym
-
+  #attr_accessible :name, :objective_ids, :weight, :operation_id, :objective_id, :unit, :formula, :acronym
+  attr_protected
   has_and_belongs_to_many :objectives
 
   has_many :indicator_scores

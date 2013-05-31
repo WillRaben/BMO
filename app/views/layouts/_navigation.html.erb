@@ -11,11 +11,26 @@
 	
 	<% if current_user.has_role? :admin %>
 		<li class="dropdown">
-	    	<a class="dropdown-toggle" data-toggle="dropdown">Indicadores<b class="caret"></b></a>
+	    	<a class="dropdown-toggle" data-toggle="dropdown">Configure<b class="caret"></b></a>
 	    		<ul class="dropdown-menu">
-	      			<li><%= link_to "Scores", setindicatorsscores_path(currentScoreDate.id)%></li>
-	      			<li><%= link_to "Metas", setindicatorsgoals_path(currentScoreDate.id)%></li>
-	      			<li><%= link_to "Crecimiento", setindicatorsgrowth_path(currentScoreDate.id)%></li>
+	    			<li><%= link_to "Perspectives", perspectives_path %></li>
+	    			<li><%= link_to "Perspective Scores", perspective_scores_path %></li>
+	    			<li><%= link_to "Objectives", objectives_path %></li>
+	    			<li><%= link_to "Objective Scores", objective_scores_path %></li>
+	    			<li><%= link_to "Indicators", indicators_path %></li>
+	    			<li><%= link_to "Indicator Scores", indicator_scores_path %></li>
+					<!-- <li><%= link_to "Scores", setindicatorsscores_path(currentScoreDate.id)%></li>
+	      			<li><%= link_to "Goals", setindicatorsgoals_path(currentScoreDate.id)%></li>
+	      			<li><%= link_to "Growth", setindicatorsgrowth_path(currentScoreDate.id)%></li>
+	      			<li><%= link_to "Base", setindicatorsbase_path(currentScoreDate.id)%></li> -->
+	    		</ul>
+		</li>
+		<li class="dropdown">
+	    	<a class="dropdown-toggle" data-toggle="dropdown">Indicadores<b class="caret"></b></a>
+	    		<ul class="dropdown-menu">	    			
+					<li><%= link_to "Scores", setindicatorsscores_path(currentScoreDate.id)%></li>
+	      			<li><%= link_to "Goals", setindicatorsgoals_path(currentScoreDate.id)%></li>
+	      			<li><%= link_to "Growth", setindicatorsgrowth_path(currentScoreDate.id)%></li>
 	      			<li><%= link_to "Base", setindicatorsbase_path(currentScoreDate.id)%></li>
 	    		</ul>
 		</li>

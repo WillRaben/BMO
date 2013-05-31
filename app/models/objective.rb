@@ -29,8 +29,8 @@
 #
 
 class Objective < ActiveRecord::Base
-  attr_accessible :name, :perspective_id, :score, :weight, :acronym, :redfrom, :greenfrom, :yellowfrom, :greento, :row, :col
-
+#  attr_accessible :name, :perspective_id, :score, :weight, :acronym, :redfrom, :redto, :yellowfrom, :yellowto, :greenfrom, :greento, :show, :greenButton, :yellowButton, :redButton,  :row, :col 
+  attr_protected
   belongs_to :perspective
   #has_and_belongs_to_many :indicators
 

@@ -14,9 +14,11 @@ Rails3BootstrapDeviseCancan::Application.routes.draw do
 
   match "indicators/emancipate/:father/:son" => "indicators#emancipate", :as => :emancipate
   match "indicators/fill" => "indicators#fill", :as => :fill
-
+  
+  
   resources :indicators
 
+ 
   match "indicator_scores/indicatoratdate/:ind/:date/:trend" => "indicator_scores#indicatoratdate", :as => :indicatoratdate
   resources :indicator_scores
 
@@ -42,11 +44,15 @@ Rails3BootstrapDeviseCancan::Application.routes.draw do
 
   match "perspectives/strategyMap" => "perspectives#strategyMap", :as => :strategyMap
   resources :perspectives
+  
+  match "home" => "home#index", :as => :home
 
   match "dashboards/show/:cat/:type/:id/:date" => "dashboards#show", :as => :showdashboard
   #match "dashboards/show/:cat/:id/:date" => "dashboards#show", :as => :showdashboard
   authenticated :user do
-    root :to => 'perspective_scores#strategymap'
+   # root :to => 'perspective_scores#strategymap' 
+   #  user = @User.id
+     root :to => 'users#index'
   end
   devise_for :users
 

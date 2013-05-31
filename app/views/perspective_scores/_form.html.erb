@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :scoredate_id %><br />
-    <%= f.collection_select :scoredate_id, ScoreDate.all, :id, :month %>
+    <%= f.collection_select :scoredate_id, ScoreDate.all, :id, :month_year %>
   </div>
   <div class="field">
     <%= f.label :score %><br />

@@ -33,6 +33,18 @@ module ObjectiveScoresHelper
   def objectiveState(ind,date)
       score = IndicatorScore.find_by_indicator_id_and_scoredate_id(ind.id,date.id).score
       #if score >= ind.redfrom && score < ind.redto
+      if score.nil? 
+        score = 0
+      end
+      puts "----------"
+      puts " "
+      puts "ind = #{ind.id}"
+      puts " ************************ "
+      puts "ind = #{date.id}"
+      puts "score = #{score.class}"
+      puts "redfrom =  #{ind.redfrom}"
+      puts " "
+      puts "----------"
       if score >= ind.redfrom 
         return 'btn btn-danger'
       end
@@ -65,6 +77,9 @@ module ObjectiveScoresHelper
   def indicatorscorestate(ind)
     score = ind.score
     #if score >= ind.redfrom && score < ind.redto
+    if score.nil?
+      score = 0      
+    end
     if score < ind.redto
       return 'btn btn-danger'
     end

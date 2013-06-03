@@ -57,6 +57,8 @@
     <%= link_to "Octubre", setindicatorsbase_path(ScoreDate.find_by_year_and_month(@date.year,10).id)%>
     <%= link_to "Noviembre", setindicatorsbase_path(ScoreDate.find_by_year_and_month(@date.year,11).id)%>
     <%= link_to "Diciembre", setindicatorsbase_path(ScoreDate.find_by_year_and_month(@date.year,12).id)%>
+    <% if ScoreDate.find_by_year_and_month(@date.year + 1,1) %>
       >>
     <%= link_to @date.year + 1, setindicatorsbase_path(ScoreDate.find_by_year_and_month(@date.year + 1,1).id)%>
+    <% end %>
 </div>

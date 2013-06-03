@@ -98,6 +98,13 @@ class IndicatorScoresController < ApplicationController
       @currentsons << IndicatorScore.find_by_indicator_id_and_scoredate_id(i.id, params[:date])
     }
     @currentindicator = IndicatorScore.find_by_indicator_id_and_scoredate_id(params[:ind],params[:date])
+    puts "<================================================="
+    puts params[:ind]
+    puts params[:date]
+    puts @currentindicator.score
+    puts "<================================================="
+    
+    
     if @currentindicator.greento > @currentindicator.redfrom
       min = @currentindicator.redfrom
       max = @currentindicator.greento

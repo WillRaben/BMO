@@ -229,7 +229,9 @@ vertical-align:middle;
     <%= link_to "Octubre", vectoratdate_path(@vector.id, ScoreDate.find_by_year_and_month(@date.year,10).id)%>
     <%= link_to "Noviembre", vectoratdate_path(@vector.id, ScoreDate.find_by_year_and_month(@date.year,11).id)%>
     <%= link_to "Diciembre", vectoratdate_path(@vector.id, ScoreDate.find_by_year_and_month(@date.year,12).id)%>
+    <% if ScoreDate.find_by_year_and_month(@date.year + 1,1) %>  
       >>
     <%= link_to @date.year + 1, vectoratdate_path(@vector.id, ScoreDate.find_by_year_and_month(@date.year + 1,1).id)%>
+    <% end %>
 </div>
 

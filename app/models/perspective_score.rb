@@ -18,8 +18,8 @@
 #
 
 class PerspectiveScore < ActiveRecord::Base
-  attr_accessible :date_id, :perspective_id, :score, :scoredate_id, :redfrom, :redto, :yellowfrom, :yellowto, :greenfrom, :greento
-
+  attr_accessible  :perspective_id, :score, :scoredate_id, :redfrom, :redto, :yellowfrom, :yellowto, :greenfrom, :greento
+  #:date_id,
   belongs_to :perspective
 
   belongs_to :scoredate, :foreign_key => "scoredate_id", :class_name => "ScoreDate"

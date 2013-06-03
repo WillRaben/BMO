@@ -975,15 +975,6 @@ ALTER TABLE ONLY vectors ALTER COLUMN id SET DEFAULT nextval('vectors_id_seq'::r
 -- Data for Name: indicator_father_son; Type: TABLE DATA; Schema: public; Owner: dbUser
 --
 
-INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (21, 40);
-INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (40, 44);
-INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (40, 45);
-INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (41, 46);
-INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (41, 47);
-INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (42, 48);
-INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (42, 49);
-INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (43, 50);
-INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (43, 51);
 INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (1, 40);
 INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (1, 41);
 INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (1, 42);
@@ -1012,6 +1003,10 @@ INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (7
 INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (7, 41);
 INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (7, 42);
 INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (7, 43);
+INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (8, 40);
+INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (8, 41);
+INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (8, 42);
+INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (8, 43);
 INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (9, 40);
 INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (9, 41);
 INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (9, 42);
@@ -1136,10 +1131,15 @@ INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (3
 INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (39, 41);
 INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (39, 42);
 INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (39, 43);
-INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (8, 40);
-INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (8, 41);
-INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (8, 42);
-INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (8, 43);
+INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (40, 44);
+INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (40, 45);
+INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (41, 46);
+INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (41, 47);
+INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (42, 48);
+INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (42, 49);
+INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (43, 50);
+INSERT INTO indicator_father_son (indicatorfather_id, indicatorson_id) VALUES (43, 51);
+
 
 
 --

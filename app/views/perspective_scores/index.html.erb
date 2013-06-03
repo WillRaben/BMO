@@ -13,7 +13,7 @@
 <% @perspective_scores.each do |perspective_score| %>
   <tr>
     <td><%= perspective_score.perspective_id %></td>
-    <td><%= perspective_score.date_id %></td>
+    <td><%= perspective_score.scoredate_id %></td>
     <td><%= perspective_score.score %></td>
     <td><%= link_to 'Show', perspective_score %></td>
     <td><%= link_to 'Edit', edit_perspective_score_path(perspective_score) %></td>

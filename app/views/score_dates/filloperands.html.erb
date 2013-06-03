@@ -43,8 +43,9 @@
 <div class="row-fluid" align="center">
 	<% if ScoreDate.find_by_year_and_month(@date.year - 1,12) %>
     	<%= link_to @score_date.year - 1, filloperands_path(ScoreDate.find_by_year_and_month(@score_date.year - 1,12).id)%>
+    	<<
 	<% end %>
-      <<
+      
     <%= link_to "Enero", filloperands_path(ScoreDate.find_by_year_and_month(@score_date.year,1).id)%>
     <%= link_to "Febrero", filloperands_path(ScoreDate.find_by_year_and_month(@score_date.year,2).id)%>
     <%= link_to "Marzo", filloperands_path(ScoreDate.find_by_year_and_month(@score_date.year,3).id)%>
@@ -57,8 +58,11 @@
     <%= link_to "Octubre", filloperands_path(ScoreDate.find_by_year_and_month(@score_date.year,10).id)%>
     <%= link_to "Noviembre", filloperands_path(ScoreDate.find_by_year_and_month(@score_date.year,11).id)%>
     <%= link_to "Diciembre", filloperands_path(ScoreDate.find_by_year_and_month(@score_date.year,12).id)%>
-      >>
-    <%= link_to @score_date.year + 1, filloperands_path(ScoreDate.find_by_year_and_month(@score_date.year + 1,1).id)%>
+      
+    <% if ScoreDate.find_by_year_and_month(@date.year + 1,1) %>
+    	<%= link_to @score_date.year + 1, filloperands_path(ScoreDate.find_by_year_and_month(@score_date.year + 1,1).id)%>
+    	>>
+    <% end %>
 </div>
 
 

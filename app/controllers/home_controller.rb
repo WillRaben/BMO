@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  helper :DemosHelper
+  #helper :DemosHelper
   def index
     @users = User.all
   end

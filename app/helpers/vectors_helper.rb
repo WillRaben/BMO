@@ -93,13 +93,13 @@ module VectorsHelper
           lay = lay + '<td rowspan = "'+objectives.size.to_s+'">'
           lay = lay + '<div class="row-fluid">'
           i = 0 
-          objectives.each{|o|
+          objectives.each{|o2|
             if i%2 == 0 
               lay = lay + '<div class="row-fluid">'
             end
             i = i + 1
             lay = lay + '<div class="span6" align="center">'
-            a = link_to image_tag(objectiveStaticButton(o,date), :size => "148x70"), objectiveatdate_path(o.id,@date.id,6), :style=>'color:#FFFFFF;'
+            a = link_to image_tag(objectiveStaticButton(o2,date), :size => "148x70"), objectiveatdate_path(o2.id,@date.id,6), :style=>'color:#FFFFFF;'
             lay = lay + a
             lay = lay + '</div>'
             if i%2 == 0 
@@ -145,13 +145,13 @@ module VectorsHelper
           lay = lay + '<td rowspan = "'+rows.to_s+'">'
           lay = lay + '<div class="row-fluid">'
           i = 0 
-          objectives.each{|o|
+          objectives.each{|o2|
             if i%2 == 0 
               lay = lay + '<div class="row-fluid">'
             end
             i = i + 1
             lay = lay + '<div class="span6" align="center">'
-            a = link_to image_tag(objectiveStaticButton(o,date), :size => "148x70"), objectiveatdate_path(o.id,@date.id,6), :style=>'color:#FFFFFF;'
+            a = link_to image_tag(objectiveStaticButton(o2,date), :size => "148x70"), objectiveatdate_path(o2.id,@date.id,6), :style=>'color:#FFFFFF;'
             lay = lay + a
             lay = lay + '</div>'
             if i%2 == 0 
@@ -171,12 +171,12 @@ module VectorsHelper
         lay = lay+ '<td>'+ a.baseline.to_s+ '</td>'
         lay = lay+ '<td>'+ a.growth.to_s+ '</td></tr>'
 
-        o.indicators.each{|i|
-          ind = IndicatorScore.find_by_indicator_id_and_scoredate_id(i.id,date.id)
+        o.indicators.each{|i2|
+          ind = IndicatorScore.find_by_indicator_id_and_scoredate_id(i2.id,date.id)
           link = link_to ind.indicator.acronym, indicatoratdate_path(ind.indicator_id,ind.scoredate_id,6), :class => indicatorscorestate(ind), :style=>'color:#FFFFFF;'
 
           lay = lay + '<tr><td>' + link + '</td>'
-          lay = lay + '<td>' + i.unit + '</td>'
+          lay = lay + '<td>' + i2.unit + '</td>'
           lay = lay+ '<td>'+ ind.score.to_s + '</td>'
           lay = lay+ '<td>'+ ind.goal.to_s + '</td>'
           lay = lay+ '<td>'+ ind.progress.to_s+ '</td>'

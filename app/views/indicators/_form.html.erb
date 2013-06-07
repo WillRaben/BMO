@@ -53,13 +53,19 @@
 
 <p>
   <h3>Indicadores que lo influencian</h3>
+  <% for indicator in Indicator.all %>
+  		<div>
+  		<%= check_box_tag "indicator[sons][]", indicator.id, @indicator.sons.include?(indicator)%>
+  		<%= indicator.name %>
+  		</div>
+  <% end %>		
 </p>
 <table>
   <tr>
     <th>Name</th>
   </tr>
 
-<!-- <% @indicator.sons.each do |indicator| %>  --> WTF
+<% @indicator.sons.each do |indicator| %>  
   <tr>
     <td><%= indicator.name %></td>
   </tr>

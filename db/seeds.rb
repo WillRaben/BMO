@@ -185,7 +185,7 @@ indicators = Indicator.all
       dates = ScoreDate.all
       indicators.each{|indicator|
           dates.each{|da|
-              IndicatorScore.create! :indicator_id => indicator.id, :scoredate_id => da.id, :score => 0, :redfrom => 0, :redto => 25, :yellowfrom => 25, :yellowto => 75, :greenfrom => 75, :greento => 100
+              IndicatorScore.create! :indicator_id => indicator.id, :scoredate_id => da.id, :score => rand(100), :redfrom => 0, :redto => 25, :yellowfrom => 25, :yellowto => 75, :greenfrom => 75, :greento => 100
           }
       }
 puts "....Done"

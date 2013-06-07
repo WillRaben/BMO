@@ -20,12 +20,14 @@ group :development do
   gem 'annotate', '~> 2.5.0'
 end
 gem "devise", ">= 2.1.0"
+gem "carrierwave"
 gem "cancan", ">= 1.6.7"
 gem "rolify", ">= 3.1.0"
 gem 'execjs'
 gem "bootstrap-sass", "~> 2.0.4"
 gem "google_visualr"
 gem "pg"
+#gem "paperclip", '~> 3.0'
 gem 'ratchetio', '>= 0.1.2'
 #gem "parseexcel", "~> 0.5.2" 
 gem "xpath", "~> 1.0.0"

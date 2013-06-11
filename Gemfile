@@ -33,3 +33,4 @@ gem 'ratchetio', '>= 0.1.2'
 gem "xpath", "~> 1.0.0"
 gem 'simple_form', '~> 2.0.4'
 gem 'therubyracer', :platform => :ruby
+gem 'thin'

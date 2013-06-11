@@ -1,0 +1,33 @@
+<h2>Indice de Archivos</h2>
+
+<table class = "table-bordered">
+  <tr>
+    <th>Ruta / Nombre</th>
+    <th>Propietario</th>
+    <th>Operaciones</th>
+  </tr>
+
+<% @archives.each do |archive| %>
+  <tr>
+    <td><%= archive.file%></td>
+    <td><%= User.find(archive.user_id).name %></td>
+    <td>
+    <%= link_to 'Descargar', archive.file_url %>
+    ::
+    <%= link_to 'Mostrar', archive %>
+    ::
+    <%= link_to 'Editar', edit_archive_path(archive) %>
+    ::
+    <%= link_to 'Borrar', archive, confirm: 'Esta Seguro?', method: :delete %>
+    ::
+    <%= link_to "Process", processfile_path(archive.id)  %>
+
+  	
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo Archivo', new_archive_path %>

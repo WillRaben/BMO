@@ -1,5 +1,9 @@
 Rails3BootstrapDeviseCancan::Application.routes.draw do
-  
+
+  match "archives/processfile/:id" => "archives#processfile" , :as => :processfile
+  resources :archives 
+
+
   match "vectors/vectoratdate/:vec/:dat" => "vectors#vectoratdate", :as => :vectoratdate
   match "vectors/vectoratdateonlyobjectives/:vec/:dat" => "vectors#vectoratdateonlyobjectives", :as => :vectoratdateonlyobjectives
   match "vectors/vectoratdatecomplete/:vec/:dat" => "vectors#vectoratdatecomplete", :as => :vectoratdatecomplete

@@ -1,0 +1,31 @@
+<%= simple_form_for(@archive, :html => {:multipart => true}) do |f| %>
+   <% if @archive.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@archive.errors.count, "error") %> prohibited this file from being saved:</h2>
+
+      <ul>
+      <% @archive.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
+
+  <div class="form-inputs"><br />
+  	
+<%= f.label :Propietario %>
+<%= f.collection_select(:user_id, User.all, :id, :name, :promnt => "Usuario al que pertenece") %>  	<br /><br />
+  <!--  f.collection_select :user_id, @myprospects, :id, :name, :prompt => "Select a prospect"  -->
+
+
+<%= f.label :Archivo %>
+<%= f.file_field :file %><br />
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

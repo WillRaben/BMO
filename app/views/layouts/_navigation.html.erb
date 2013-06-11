@@ -49,6 +49,7 @@
 	      			
 	      			<li><%= link_to 'Crear usuario', new_user_registration_path %></li>
 	      			<li><%= link_to 'Listar usuarios', users_path %></li>
+	      			<li><%= link_to 'Archivos', archives_path %></li>
 	    		</ul>
 	    
 	<% elsif current_user.has_role? :aforador %>

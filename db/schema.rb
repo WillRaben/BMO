@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120625052345) do
+ActiveRecord::Schema.define(:version => 20130608002658) do
+
+  create_table "archives", :force => true do |t|
+    t.string   "file"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "indicator_father_son", :id => false, :force => true do |t|
     t.integer "indicatorfather_id"

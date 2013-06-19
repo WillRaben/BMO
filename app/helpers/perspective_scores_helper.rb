@@ -154,6 +154,8 @@ module PerspectiveScoresHelper
       if o.acronym   
         a = link_to image_tag(objectiveStaticButton(o,date), :size => "148x70"), objectiveatdate_path(o.id,@date.id,6) 
         lay = lay + a 
+        puts lay
+        puts "*****************************************************"
       else
         a = link_to objectiveatdate_path(o.id,@date.id,6) do 
                     objectiveOval(o,date,o.name) 
@@ -199,9 +201,15 @@ module PerspectiveScoresHelper
         dif.times{
           lay = lay + '<div class="span2" align="center"><!--columnaVacia--></div>' 
         }
-        lay = lay + '<div class="span2" align="center">'
-        a = link_to image_tag(objectiveStaticButton(o,date), :size => size), objectiveatdate_path(o.id,@date.id,6)
+        #lay = lay +  '<div class="span2" align="center">'
+        lay = lay + '<div class="ovalo" ' + objectiveStatus(o,date) + 'align="center">' 
+        a = link_to o.name.truncate(12), objectiveatdate_path(o.id,@date.id,6)
+        #a = link_to image_tag(objectiveStaticButton(o,date), :size => size), objectiveatdate_path(o.id,@date.id,6)
+        
         lay = lay + a + '</div><!--div para el link -->'
+        # puts "*****************************************************"
+         # puts lay
+        # puts "*****************************************************"
         colcounter = colcounter + dif + 1
       }
       lay = lay + '</div><!--div para el row -->'
@@ -241,7 +249,8 @@ module PerspectiveScoresHelper
       r.each{|ri|
         dif = ri.col - colcounter
         dif.times{
-          lay = lay + '<div class="span2" align="center"><!--columnaVacia--></div>' 
+          lay = lay + '<div class="span2" align="center"><!--columnaVacia--></div>'
+         # lay = lay + '<div class="ovalo" id="verde" align="center"><!--columnaVacia--></div>' 
         }
         if ri.vectors.size > 0 && vectsize == 0 
           vectsize = ri.vectors.first.inprocess
@@ -258,18 +267,23 @@ module PerspectiveScoresHelper
           vectcounter = vectcounter + 1
         end
         if !invector
-          lay = lay + '<div class="span2" align="center"><!--inicia link fuera-->'
+         lay = lay + '<div class="span2" align="center"><!--inicia link fuera-->'
+         
+          #lay = lay + '<div class="ovalo" ' + objectiveStatus(ri,date) + 'align="center">' 
         end
         if vectsize > 0
           if vectsize == 2
-            span = '<div class="span6 align="center"><!--dentro del vector-->'
+            #span = '<div class="span6 align="center"><!--dentro del vector-->'
+            span = '<div class="ovalo" id="verde" align="center"><!--dentro del vector-->'
           end
           if vectsize == 3
             span = '<div class="span9 align="center"><!--dentro del vector-->'
+            #span = '<div class="ovalo" id="verde" align="center"><!--dentro del vector-->'
           end
           lay = lay + span
         end
-        a = link_to image_tag(objectiveStaticButton(ri,date), :size => "148x70"), objectiveatdate_path(ri.id,@date.id,6) 
+       # a = link_to image_tag(objectiveStaticButton(ri,date), :size => "148x70"), objectiveatdate_path(ri.id,@date.id,6)
+        a = link_to ri.name.truncate(12), objectiveatdate_path(ri.id,@date.id,6) 
         lay = lay + a + '</div><!--div para el link -->'
         colcounter = colcounter + dif + 1
         if vectsize != 0 &&  vectcounter == vectsize

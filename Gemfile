@@ -15,7 +15,7 @@ gem "capybara", ">= 1.1.2", :group => :test
 gem "database_cleaner", ">= 0.7.2", :group => :test
 gem "launchy", ">= 2.1.0", :group => :test
 gem "hirb", ">= 0.7.0", :group => [:development, :test]
-gem "spreadsheet", "~> 0.8.5"
+gem "roo"
 group :development do
   gem 'annotate', '~> 2.5.0'
 end

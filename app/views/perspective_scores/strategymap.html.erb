@@ -15,6 +15,8 @@ a:active {
 
 <h2><%=h image_tag("bmo.png", :size => "100x70") %> Mapa estrategico <font size="2">(<%=h scoredate_month_to_text(@date)%>/<%=h @date.year%>)</font></h2>
 
+<!--   ------- FINANCIERA  ---------  -->
+
 <div class="row-fluid">
   <table class="table darkborder">
       <tbody>
@@ -24,8 +26,10 @@ a:active {
               <%=h perspectiveCoordinatesLayout(@financiera, @date, size)%>
             </td>
         </tr>
-<tr></tr>
+		<tr></tr>
         <td></td>
+        
+        <!--   ------- CLIENTES  ---------  -->
         <td>
           <div class="row-fluid">
             <div class="span2" align="center">
@@ -52,8 +56,11 @@ a:active {
             <td>
               <%=h perspectiveCoordinatesLayout(@clientes, @date, size)%>
             </td>
+            
         </tr>
+        <tr></tr>
         <td></td>
+        <!--   --------  PROCESOS  --------  -->
         <td>
           <div class="row-fluid">
             <div class="span1" align="center"></div>
@@ -74,7 +81,7 @@ a:active {
             </div>
             <div class="span1" align = "center"></div>
           </div>
-        </td>
+       </td>
 <% size = "136x91"%>
         <tr>
         	<td rowspan="<%=h (@procesos.showableObjectives.size/4).ceil %>"><%= link_to image_tag("procesos_btn.png"), showdashboard_path("perspective", "trend", 3, @date.id), :style=>'color:#FFFFFF;'%></td>

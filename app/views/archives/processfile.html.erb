@@ -1,4 +1,28 @@
-<p id="notice"><%= notice %></p>
 
-<%= puts :params %>
+
+
+<table class = "table-striped">
+	<%@xlsImport[0..-1].each do |hash| %>
+		<tr>
+			
+			<% hash.each do |values| %>
+			<tr>
+				<%values.each_pair do |hashkeys|%>
+				<td>
+				  <%= hashkeys %>
+				 
+				</td>
+				<%end%>
+				
+			</tr>
+			 
+			<% end %>		
+		</tr>
+		
+	
+	<% end %>
+	
+</table>
+
+<p id="notice"><%= notice %></p>
 <%= link_to 'Back', :back %>

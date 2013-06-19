@@ -103,4 +103,18 @@ include ObjectiveScoresHelper
       return obj.greenButton
     end
   end
+  
+  def objectiveStatus(obj,date)
+    score = ObjectiveScore.find_by_objective_id_and_scoredate_id(obj.id,date.id).score
+    #if score >= obj.redfrom && score < obj.redto
+    if score < 25 #score < obj.redto
+      return ' id="rojo" '
+    end
+    if score >= 25 && score <= 75 #score >= obj.yellowfrom && score <= obj.yellowto
+      return ' id="amarillo" '
+    end
+    if score > 75 #score > obj.greenfrom #&& score <= obj.greento
+      return ' id="verde" '
+    end
+  end
 end

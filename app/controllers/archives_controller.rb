@@ -1,4 +1,7 @@
 class ArchivesController < ApplicationController
+  
+
+  
   # GET /archives
   # GET /archives.json
   def index
@@ -83,7 +86,20 @@ class ArchivesController < ApplicationController
   
   def processfile
     #@archive = Archive.find(params[:id])
+    file = Archive.find(params[:id]).file
+    #book = Spreadsheet.open "public/#{@archive.file.to_s}"
+    
+    #@sheet1 = book.worksheet 'Perspective1'
+    @xlsImport = Archive.import(file)
+    #Archive.import(params[:file])
+    #puts @wtf
+   # puts "--------------------------------------------*******---------------<<<<<"
+    #redirect_to archives_url, notice: "Archivo Importado."
+    render "processfile"
    #do something with the archive
   end
+  
+  
+  
   
 end

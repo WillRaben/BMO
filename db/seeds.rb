@@ -185,7 +185,7 @@ indicators = Indicator.all
       dates = ScoreDate.all
       indicators.each{|indicator|
           dates.each{|da|
-              IndicatorScore.create! :indicator_id => indicator.id, :scoredate_id => da.id, :score => rand(100), :redfrom => 0, :redto => 25, :yellowfrom => 25, :yellowto => 75, :greenfrom => 75, :greento => 100
+              IndicatorScore.create! :indicator_id => indicator.id, :scoredate_id => da.id, :score => 0, :redfrom => 0, :redto => 25, :yellowfrom => 25, :yellowto => 75, :greenfrom => 75, :greento => 100
           }
       }
 puts "....Done"
@@ -214,5 +214,64 @@ perspectives = Perspective.all
 puts "....Done"
 puts '------------------------'
 
+puts 'CREATING DEFAULT Indicator-Indicator Relationships'
+
+indicators.each { |indicator|
+ 
+  
+  case indicator.id 
+  when 1..39
+      @sonid = 40
+      4.times do 
+        indicator.sons = [Indicator.find_by_id(@sonid)]
+        @sonid += 1
+      end
+  when 40
+       indicator.sons = [Indicator.find_by_id(44), Indicator.find_by_id(45)] 
+       indicator.objectives = [Objective.find_by_id(1..20)]
+  when 41
+       indicator.sons = [Indicator.find_by_id(46), Indicator.find_by_id(47)] 
+  when 42
+       indicator.sons = [Indicator.find_by_id(48), Indicator.find_by_id(49)] 
+  when 43
+       indicator.sons = [Indicator.find_by_id(50), Indicator.find_by_id(51)]     
+  end
+}
+puts "....Done"
+puts '------------------------'
+
+puts 'CREATING DEFAULT Vector-Objective Relationships'
+
+ vectors = Vector.all
+ 
+ vectors.each { |vector|
+   
+   case vector.id
+   when 1
+     objarray = [1, 2, 3, 5, 6, 7, 8, 10, 11, 17, 18, 19, 20 ]
+     objarray.each { |id|
+      vector.objectives = [Objective.find_by_id(id)] 
+     }
+   when 2
+     objarray = [1, 2, 3, 5, 6, 7, 8, 12, 13, 14, 17, 18, 19, 20 ]
+     objarray.each { |id|
+      vector.objectives = [Objective.find_by_id(id)]
+     }
+   when 3
+     objarray = [1, 2, 3, 5, 6, 7, 8, 9, 15, 17, 18, 19, 20 ]
+     objarray.each { |id|
+      vector.objectives = [Objective.find_by_id(id)]
+     }
+   when 4
+     objarray = [1, 3, 4, 16, 17, 18, 19, 20 ]
+     objarray.each { |id|
+      vector.objectives = [Objective.find_by_id(id)]
+     }
+   
+   end
+ }
+
+puts "....Done"
+puts '------------------------'
 
 puts 'DB Seed END'

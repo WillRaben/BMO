@@ -91,10 +91,7 @@ class ArchivesController < ApplicationController
     
     #@sheet1 = book.worksheet 'Perspective1'
     @xlsImport = Archive.import(file)
-    #Archive.import(params[:file])
-    #puts @wtf
-   # puts "--------------------------------------------*******---------------<<<<<"
-    #redirect_to archives_url, notice: "Archivo Importado."
+  
     render "processfile"
    #do something with the archive
   end

@@ -60,28 +60,7 @@ class Archive < ActiveRecord::Base
         end
         puts @objecfiltered
         
-        #-------------------- KPI --------------------------
-        # @kpifiltered = []
-        # @kpifiltered << @kpi_indicators_array.first
-        # @kpi_indicators_array.each do |i|
-#      
-          # if @kpifiltered.detect {|f| f["name"] == i["name"] } == nil
-            # @kpifiltered << i        
-          # end
-        # end
-        # puts @kpifiltered
-        
-        
-        
-       # @archivearray << row
-     
-        # product = find_by_id(row["id"]) || new
-        # puts "wtf3"
-        # product.attributes = row.to_hash.slice(*accessible_attributes)
-        # puts "wtf4"
-        # product.save!
-        # puts "wtf5"
-      #puts @persfiltered
+
         
       return @perspectives_array, @objectives_array, @kpi_indicators_array, @indicators_array
       

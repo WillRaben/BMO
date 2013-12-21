@@ -73,10 +73,10 @@ class DashboardsController < ApplicationController
       @charts  = []
       i = 0 
       @last6s.each{|l|
-        @charts << produceLineChart("Tendencia de 6 meses anteriores", l, @sons[i].name)
+        @charts << produceBarChart("Tendencia de 6 meses anteriores", l, @sons[i].name)
         i = i + 1
       }
-      @mychart = produceLineChart("Tendencia de 6 meses anteriores", mylast6s, @individual.name)
+      @mychart = produceBarChart("Tendencia de 6 meses anteriores", mylast6s, @individual.name)
     end
   end
 

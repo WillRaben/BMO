@@ -25,7 +25,9 @@ module ObjectiveScoresHelper
       }
       scores = []
       dates.each{|d|
-          scores.unshift(ObjectiveScore.find_by_objective_id_and_scoredate_id(objective.id, d.id))            
+        unless d.nil? 
+          scores.unshift(ObjectiveScore.find_by_objective_id_and_scoredate_id(objective.id, d.id))
+        end              
       }
       return scores 
   end

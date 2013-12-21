@@ -20,7 +20,11 @@
 
 <% i = 0%>
   <div class="row-fluid">
+  	
     <% @charts.each do |p|%>
+    <% puts "--******----------------------xxxx----------------------***"%>
+  	<% puts p %>
+    
       <div class="span4" align="center">
         <div id=<%= "'chart" + i.to_s + "'"%>></div>
         <%= render_chart(p, "chart" + i.to_s) %>

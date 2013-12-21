@@ -33,5 +33,41 @@ include ScoreDatesHelper
         option["vAxes" => { title: "Porcentaje"}]
         return GoogleVisualr::Interactive::LineChart.new(data_table, option)
     end
+    
+     def producePieChart(title, scores, name)
+        data_table = GoogleVisualr::DataTable.new
+        data_table.new_column('string', 'Mes' ) 
+        data_table.new_column('number', name) 
+        data_table.new_column('number', 'Meta')  
+        # Add Rows and Values
+        #scores?    NOTE: scores is an array of ScoreDate Objects that has been turning nil elements in it.
+        scores.each{|s| 
+         unless s.nil? 
+            data_table.add_rows([[scoredate_month_to_text(ScoreDate.find(s.scoredate_id)), s.score, s.goal]])
+          end    
+        }
+        option = { title: title }
+        option["vAxes" => { title: "Porcentaje"}]
+        return GoogleVisualr::Interactive::PieChart.new(data_table, option)
+    end
+    
+     def produceBarChart(title, scores, name)
+        data_table = GoogleVisualr::DataTable.new
+        data_table.new_column('string', 'Mes' ) 
+        data_table.new_column('number', name) 
+        data_table.new_column('number', 'Meta')  
+        # Add Rows and Values
+        #scores?    NOTE: scores is an array of ScoreDate Objects that has been turning nil elements in it.
+        scores.each{|s| 
+         unless s.nil? 
+            data_table.add_rows([[scoredate_month_to_text(ScoreDate.find(s.scoredate_id)), s.score, s.goal]])
+          end    
+        }
+        option = { title: title }
+        option["vAxes" => { title: "Porcentaje"}]
+        return GoogleVisualr::Interactive::BarChart.new(data_table, option)
+    end
+
+
 
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130608002658) do
+ActiveRecord::Schema.define(:version => 20130722162815) do
 
   create_table "archives", :force => true do |t|
     t.string   "file"
@@ -61,8 +61,9 @@ ActiveRecord::Schema.define(:version => 20130608002658) do
     t.string   "unit"
     t.string   "formula"
     t.boolean  "show",         :default => true
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+    t.boolean  "dashdisplay",  :default => false
   end
 
   create_table "indicators_objectives", :id => false, :force => true do |t|
@@ -110,8 +111,9 @@ ActiveRecord::Schema.define(:version => 20130608002658) do
     t.string   "redButton"
     t.integer  "col"
     t.integer  "row"
-    t.datetime "created_at",                       :null => false
-    t.datetime "updated_at",                       :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.boolean  "dashdisplay",    :default => false
   end
 
   create_table "operations", :force => true do |t|
@@ -148,8 +150,9 @@ ActiveRecord::Schema.define(:version => 20130608002658) do
     t.float    "greenfrom"
     t.float    "greento"
     t.string   "title_image"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.boolean  "dashdisplay", :default => false
   end
 
   create_table "raw_data", :force => true do |t|
